@@ -1,0 +1,249 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8d5ff, #ffd6e8, #d5e5ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #573b82;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: #76618e;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Main Card */
+.todo-card {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 15px 45px rgba(90, 54, 130, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.todo-card h2 {
+    color: #49336c;
+    font-size: 25px;
+}
+
+.subtitle {
+    color: #9988aa;
+    font-size: 13px;
+    margin: 5px 0 25px;
+}
+
+/* Input Form */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 2px solid #eadcf8;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #a77be8;
+    box-shadow: 0 0 0 3px rgba(167, 123, 232, 0.12);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+/* Add Button */
+#add-btn {
+    background: linear-gradient(135deg, #9870df, #c17be5);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(145, 100, 210, 0.3);
+}
+
+/* Task Counter */
+#count {
+    color: #8667ad;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filters button {
+    background: #f3edfa;
+    color: #80649e;
+    padding: 8px 17px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.filters button:hover,
+.filters button.active {
+    background: #9870df;
+    color: white;
+}
+
+/* Task List */
+#list {
+    list-style: none;
+}
+
+#list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #faf7ff;
+    border: 1px solid #eee5fa;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    animation: appear 0.3s ease;
+}
+
+#list li span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    color: #59466e;
+    font-size: 13px;
+}
+
+/* Completed Tasks */
+#list li.done span {
+    text-decoration: line-through;
+    color: #aaa0b5;
+}
+
+/* Task Buttons */
+#list button {
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+#list button[data-action="toggle"] {
+    background: #e5f5e9;
+    color: #39965b;
+}
+
+#list button[data-action="delete"] {
+    background: #ffe8ed;
+    color: #dc617c;
+}
+
+#list button:hover {
+    transform: scale(1.05);
+}
+
+/* Clear Completed */
+#clear-completed {
+    background: #fbe8f0;
+    color: #c65d83;
+    padding: 11px 16px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+#clear-completed:hover {
+    background: #f6d3e2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #806b99;
+    font-size: 12px;
+}
+
+/* Animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    .todo-card {
+        padding: 22px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    #add-btn {
+        padding: 13px;
+    }
+}

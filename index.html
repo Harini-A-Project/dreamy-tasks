@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Tasks | To-Do List</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript file -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>✨ Dreamy Tasks</h1>
+            <p>Make today productive and beautiful!</p>
+        </header>
+
+        <!-- Main To-Do Card -->
+        <main class="todo-card">
+
+            <h2>My Tasks 📝</h2>
+            <p class="subtitle">A little progress every day.</p>
+
+            <!-- Task Input -->
+            <form id="form">
+                <input
+                    type="text"
+                    id="text"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                >
+
+                <button type="submit" id="add-btn">
+                    + Add Task
+                </button>
+            </form>
+
+            <!-- Task Counter -->
+            <p id="count">0 tasks left</p>
+
+            <!-- Task Filters -->
+            <div class="filters">
+                <button type="button" data-filter="all" class="active">All</button>
+                <button type="button" data-filter="active">Active</button>
+                <button type="button" data-filter="done">Done</button>
+            </div>
+
+            <!-- Task List -->
+            <ul id="list"></ul>
+
+            <!-- Clear Completed -->
+            <button type="button" id="clear-completed">
+                Clear Completed
+            </button>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with 💜 for a productive day!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
